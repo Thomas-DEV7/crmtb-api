@@ -1,8 +1,8 @@
-import { prisma } from '../../core/prisma.js';
+import { prisma } from '../../core/prisma.ts';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { env } from '../../config/env.js';
-import { AppError } from '../../shared/errors/AppError.js';
+import { env } from '../../config/env.ts';
+import { AppError } from '../../shared/errors/AppError.ts';
 
 export async function signUp(input: { name: string; email: string; password: string }) {
   const exists = await prisma.user.findUnique({ where: { email: input.email } });

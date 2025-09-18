@@ -1,6 +1,6 @@
-import { app } from './core/app.js';
-import { env } from './config/env.js';
-import { logger } from './core/logger.js';
+import { app } from './core/app.ts';
+import { env } from './config/env.ts';
+import { logger } from './core/logger.ts';
 
 app.listen(env.PORT, () => {
   logger.info(`CRMTB API running on :${env.PORT}`);
